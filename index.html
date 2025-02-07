@@ -12,7 +12,8 @@
     <style>
         @import url(style.css);
     </style>
-
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+    
     <!-- Para adaptarlo a varias pantallas -->
     <meta name="generator" content="Elementor 3.24.5; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
     <style>
@@ -51,11 +52,34 @@
                 <h4>Nos encantaría que compartieras este día con nosotros</h4>
                 <h1>Nos casamos!!!</h1>
                 <br>
+
+                <a href="#" id="flecha-abajo">
+                    <i class="fa-solid fa-circle-arrow-down"></i>
+                </a>
+                
+                <br>
                 <p>Desliza hacia abajo para conocer más</p>
             </div>
         </section>
     </div>
 
+    <div class="seccion2">
+        <h2 id="seccion2">Aquí comienza nuestra nueva historia</h2>
+    </div>
+
+    <div class="seccion3">
+
+    </div>
 </body>
+
+<script>
+    document.getElementById("flecha-abajo").addEventListener("click", function (event) {
+        event.preventDefault();
+        document.querySelector(".seccion2").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+</script>
 
 </html>
